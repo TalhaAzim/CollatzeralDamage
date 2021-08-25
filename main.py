@@ -27,7 +27,8 @@ def collatzseq(n):
 
 def main():
 
-    [collatzify(i) for i in range(2022)]
+    # just building a cache of results
+    #[collatzify(i) for i in range(2022)]
 
     a = [i for i in collatzseq(1987)]
     b = [i for i in collatzseq(1993)]
@@ -35,7 +36,9 @@ def main():
     d = [i for i in collatzseq(2021)]
 
     print(
-        f'{a[0]}: {len(a)}, {b[0]}: {len(b)}, {c[0]}: {len(c)}, {d[0]}: {len(d)}'
+        ", ".join(
+            f'{i[0]}: {len(i)}' for i in (a, b, c, d)
+        )
     )
 
 
