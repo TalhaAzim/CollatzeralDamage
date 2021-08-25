@@ -28,7 +28,6 @@ def collatzseq(n):
 def main():
 
     [collatzify(i) for i in range(2022)]
-    [fib(i) for i in range(10)]
 
     a = [i for i in collatzseq(1987)]
     b = [i for i in collatzseq(1993)]
