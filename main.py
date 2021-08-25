@@ -1,6 +1,7 @@
 def collatzify(n):
     return 3 * n + 1 if n % 2 else n // 2
 
+
 def collatz(n, *, memo={2: 1}):
     yield n
     while n != 1:
