@@ -7,7 +7,14 @@ class Memo(object):
         self.cache = self.cache_factory()
 
     def __call__(self, n):
-        return self.cache.setdefault(n, self.fn(n))
+        #return self.cache.setdefault(n, self.fn(n))
+        try:
+            n = self.cache[n]
+        except KeyError:
+            k, n = n, self.fn(n)
+            self.cache[k] = n
+        finally:
+            return n
 
     def __repr__(self):
         return self.fn.__repr__()
