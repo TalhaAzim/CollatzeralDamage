@@ -35,7 +35,7 @@ def collatzseq(n):
 def main():
 
     # just building a cache of results
-    #[collatzify(i) for i in range(2022)]
+    [collatzify(i) for i in range(2022)]
 
     a = [i for i in collatzseq(1987)]
     b = [i for i in collatzseq(1993)]
